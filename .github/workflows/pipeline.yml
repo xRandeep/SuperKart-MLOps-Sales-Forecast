@@ -46,13 +46,29 @@ jobs:
       
     - name: Push to Hugging Face Spaces
       run: |
-        # Configure Git to recognize the bot
+        # --- CLEANUP STEP ---
+        # 1. Remove the generated binary model (train.py already uploads it to Model Hub)
+        rm -f model.joblib
+        rm -f artifacts/model.joblib
+
+        # 2. Remove Jupyter Notebooks so they don't upload to Space
+        find . -name "*.ipynb" -type f -delete
+
+        # --- FRESH START PUSH ---
+        # 3. DELETE THE .GIT FOLDER (Wipes out "poisoned" history)
+        rm -rf .git
+        
+        # 4. Initialize a brand new Git repository
+        git init
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
         
-        # Add Hugging Face Space as a remote repo
-        # REPLACE 'YOUR_USERNAME/SPACE_NAME' below!
-        git remote add space https://oauth2:$HF_TOKEN@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME
+        # 5. Add all currently existing files (Clean versions only)
+        git add .
         
-        # Push code to Space to trigger deployment
-        git push space main:main --force
+        # 6. Commit 
+        git commit -m "Deploy app (Fresh Start - Clean History)"
+        
+        # 7. Add Remote and Force Push (Restored this logic)
+        git remote add space https://oauth2:$HF_TOKEN@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME
+        git push --force space main:main

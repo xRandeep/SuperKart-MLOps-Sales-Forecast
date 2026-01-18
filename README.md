@@ -51,7 +51,7 @@ This project implements an automated **MLOps pipeline** to predict the `Product_
 ├── dev/Advanced_MLOps_SuperKart_Randeep.ipynb 	# Research & Development Notebook
 ├── src/register_data.py					 	# Upload raw data to HF
 ├── src/process_data.py 						# Load, cleanup, prepare and stage data to HF for training
-└── src/train.py 								# TRain, evaluate and upload selected model to HF
+└── src/train.py 								# Train, evaluate and upload selected model to HF
 ```
 
 ## 🚀 How to Run Locally
