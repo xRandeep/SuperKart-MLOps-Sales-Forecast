@@ -47,7 +47,6 @@ This project implements an automated **MLOps pipeline** to predict the `Product_
 ├── app.py               						# Streamlit Application logic
 ├── Dockerfile           						# Configuration for containerization
 ├── requirements.txt     						# Python dependencies
-├── artifacts/model.joblib  					# Trained Model Pipeline (Artifact)
 ├── README.md            						# Project Documentation
 ├── dev/Advanced_MLOps_SuperKart_Randeep.ipynb 	# Research & Development Notebook
 ├── src/register_data.py					 	# Upload raw data to HF
