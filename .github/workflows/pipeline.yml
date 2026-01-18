@@ -63,6 +63,9 @@ jobs:
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
         
+        #Rename the default branch to 'main' immediately
+        git branch -m main
+        
         # 5. Add all currently existing files (Clean versions only)
         git add .
         
