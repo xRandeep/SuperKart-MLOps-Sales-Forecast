@@ -18,6 +18,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Downloads full history (Fixes 'shallow update' error)
+        lfs: true       # Enables Large File Storage (Fixes 'lfs-check' error)
     
     - name: Set up Python 3.9
       uses: actions/setup-python@v3
