@@ -1,3 +1,13 @@
+---
+title: SuperKart Sales Forecast
+emoji: 🛒
+colorFrom: green
+colorTo: blue
+sdk: docker
+pinned: false
+app_port: 7860
+---
+
 # 🛒 SuperKart Sales Forecasting - MLOps Pipeline
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)
