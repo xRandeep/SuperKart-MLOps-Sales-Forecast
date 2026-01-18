@@ -42,14 +42,17 @@ This project implements an automated **MLOps pipeline** to predict the `Product_
 ## 📂 Repository Structure
 
 ```text
-├── .github/workflows/   # CI/CD Pipeline (pipeline.yml)
-├── data/                # Processed datasets (optional, mostly on HF)
-├── app.py               # Streamlit Application logic
-├── Dockerfile           # Configuration for containerization
-├── requirements.txt     # Python dependencies
-├── model.joblib         # Trained Model Pipeline (Artifact)
-├── README.md            # Project Documentation
-└── Advanced_MLOps_SuperKart.ipynb # Research & Development Notebook
+├── .github/workflows/   						# CI/CD Pipeline (pipeline.yml)
+├── data/                						# Processed datasets (optional, mostly on HF)
+├── app.py               						# Streamlit Application logic
+├── Dockerfile           						# Configuration for containerization
+├── requirements.txt     						# Python dependencies
+├── artifacts/model.joblib  					# Trained Model Pipeline (Artifact)
+├── README.md            						# Project Documentation
+├── dev/Advanced_MLOps_SuperKart_Randeep.ipynb 	# Research & Development Notebook
+├── src/register_data.py					 	# Upload raw data to HF
+├── src/process_data.py 						# Load, cleanup, prepare and stage data to HF for training
+└── src/train.py 								# TRain, evaluate and upload selected model to HF
 ```
 
 ## 🚀 How to Run Locally
