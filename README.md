@@ -50,12 +50,12 @@ git clone [https://github.com/YOUR_USERNAME/SuperKart-MLOps-Sales-Forecast.git](
 cd SuperKart-MLOps-Sales-Forecast
 ```
 
-**2. Install Dependencies
+**2. Install Dependencies**
 ```Bash
 pip install -r requirements.txt
 ```
 
-**3. Run the App
+**3. Run the App**
 ```Bash
 streamlit run app.py
 ```
