@@ -40,3 +40,47 @@ This project implements an automated **MLOps pipeline** to predict the `Product_
 ├── model.joblib         # Trained Model Pipeline (Artifact)
 ├── README.md            # Project Documentation
 └── Advanced_MLOps_SuperKart.ipynb # Research & Development Notebook
+```
+
+## 🚀 How to Run Locally
+
+**1. Clone the repository**
+```bash
+git clone [https://github.com/YOUR_USERNAME/SuperKart-MLOps-Sales-Forecast.git](https://github.com/YOUR_USERNAME/SuperKart-MLOps-Sales-Forecast.git)
+cd SuperKart-MLOps-Sales-Forecast
+```
+**2. Install Dependencies
+```Bash
+pip install -r requirements.txt
+```
+**3. Run the App
+```Bash
+streamlit run app.py
+```
+
+## 📊 Model Performance
+
+After extensive hyperparameter tuning and cross-validation, the **Random Forest** model outperformed others.
+
+| Model | RMSE | R2 Score |
+| :--- | :--- | :--- |
+| **Random Forest** | **280.85** | **0.93** |
+| Gradient Boosting | 284.43 | 0.92 |
+| XGBoost | 285.58 | 0.92 |
+
+## 🔗 Deployment
+
+The application is live and can be accessed here:
+**[Link to your Hugging Face Space]**
+
+## 🤝 Contributing
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
